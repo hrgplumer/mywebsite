@@ -26,5 +26,6 @@ namespace mywebsite.Entities
         }
     
         public virtual DbSet<CarouselResource> CarouselResources { get; set; }
+        public virtual DbSet<NavbarResource> NavbarResources { get; set; }
     }
 }

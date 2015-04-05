@@ -13,4 +13,7 @@ namespace mywebsite.Entities
     public partial class CarouselResource : Resource
     {
     }
+
+    public partial class NavbarResource : Resource
+    { }
 }

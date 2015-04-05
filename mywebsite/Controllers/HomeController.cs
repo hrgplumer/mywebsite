@@ -15,7 +15,7 @@ namespace mywebsite.Controllers
             var repo = new CarouselRepository();
             var model = new IndexViewModel()
             {
-                CarouselResources = repo.GetAll()
+                CarouselResources = repo.GetAll().Take(3).OrderBy(r => r.Ordinal)
             };
 
             return View(model);

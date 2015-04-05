@@ -21,6 +21,7 @@ namespace mywebsite.Repository
         public IEnumerable<CarouselResource> GetAll()
         {
             return Context.CarouselResources;
+            // only take first three elements
         }
     }
 }

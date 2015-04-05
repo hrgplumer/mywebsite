@@ -18,8 +18,20 @@
           <Property Name="ResourceDate" Type="datetime" />
           <Property Name="LinkUrl" Type="varchar" MaxLength="100" />
         </EntityType>
+        <EntityType Name="NavbarResource">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="50" />
+          <Property Name="Action" Type="varchar" MaxLength="50" />
+          <Property Name="Controller" Type="varchar" MaxLength="50" />
+          <Property Name="Ordinal" Type="int" />
+          <Property Name="Active" Type="bit" Nullable="false" />
+        </EntityType>
         <EntityContainer Name="MyWebsiteModelStoreContainer">
           <EntitySet Name="CarouselResource" EntityType="Self.CarouselResource" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="NavbarResource" EntityType="Self.NavbarResource" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
       </Schema></edmx:StorageModels>
     <!-- CSDL content -->
@@ -40,7 +52,19 @@
         </EntityType>
         <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="CarouselResources" EntityType="Self.CarouselResource" />
+          <EntitySet Name="NavbarResources" EntityType="MyWebsiteModel.NavbarResource" />
         </EntityContainer>
+        <EntityType Name="NavbarResource">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Action" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Controller" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Ordinal" Type="Int32" />
+          <Property Name="Active" Type="Boolean" Nullable="false" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -58,6 +82,18 @@
                 <ScalarProperty Name="Ordinal" ColumnName="Ordinal" />
                 <ScalarProperty Name="Active" ColumnName="Active" />
                 <ScalarProperty Name="ResourceDate" ColumnName="ResourceDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="NavbarResources">
+            <EntityTypeMapping TypeName="MyWebsiteModel.NavbarResource">
+              <MappingFragment StoreEntitySet="NavbarResource">
+                <ScalarProperty Name="Active" ColumnName="Active" />
+                <ScalarProperty Name="Ordinal" ColumnName="Ordinal" />
+                <ScalarProperty Name="Controller" ColumnName="Controller" />
+                <ScalarProperty Name="Action" ColumnName="Action" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
