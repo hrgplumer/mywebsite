@@ -202,6 +202,7 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\partial\Navbar.cshtml" />
     <Content Include="Views\Shared\partial\Carousel.cshtml" />
+    <Content Include="Views\Shared\partial\Footer.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
