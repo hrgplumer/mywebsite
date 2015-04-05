@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using mywebsite.Repository;
+using mywebsite.ViewModels.Home;
 
 namespace mywebsite.Controllers
 {
@@ -10,7 +12,13 @@ namespace mywebsite.Controllers
     {
         public ActionResult Index()
         {
-            return View();
+            var repo = new CarouselRepository();
+            var model = new IndexViewModel()
+            {
+                CarouselResources = repo.GetAll()
+            };
+
+            return View(model);
         }
     }
 }

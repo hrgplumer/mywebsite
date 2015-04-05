@@ -21,5 +21,6 @@ namespace mywebsite.Entities
         public int Ordinal { get; set; }
         public bool Active { get; set; }
         public Nullable<System.DateTime> ResourceDate { get; set; }
+        public string LinkUrl { get; set; }
     }
 }
