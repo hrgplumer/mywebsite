@@ -37,7 +37,7 @@
           <Property Name="Active" Type="Boolean" Nullable="false" />
           <Property Name="ResourceDate" Type="DateTime" Precision="3" />
         </EntityType>
-        <EntityContainer Name="MyWebsiteEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="CarouselResources" EntityType="Self.CarouselResource" />
         </EntityContainer>
       </Schema>
@@ -45,7 +45,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="MyWebsiteModelStoreContainer" CdmEntityContainer="MyWebsiteEntities">
+        <EntityContainerMapping StorageEntityContainer="MyWebsiteModelStoreContainer" CdmEntityContainer="Entities">
           <EntitySetMapping Name="CarouselResources">
             <EntityTypeMapping TypeName="MyWebsiteModel.CarouselResource">
               <MappingFragment StoreEntitySet="CarouselResource">

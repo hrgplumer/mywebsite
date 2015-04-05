@@ -13,10 +13,10 @@ namespace mywebsite.Entities
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class MyWebsiteEntities : DbContext
+    public partial class Entities : DbContext
     {
-        public MyWebsiteEntities()
-            : base("name=MyWebsiteEntities")
+        public Entities()
+            : base("name=Entities")
         {
         }
     

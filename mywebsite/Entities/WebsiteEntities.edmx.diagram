@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="f4b3c0f46239492cbf7f23b6860ae822" Name="Diagram1">
+      <Diagram DiagramId="5f5a20446e044fa79ccce3c44a1eecf7" Name="Diagram1">
         <EntityTypeShape EntityType="MyWebsiteModel.CarouselResource" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
       </Diagram>
     </edmx:Diagrams>
